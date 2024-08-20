@@ -1,0 +1,203 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130vh;
+    padding-top: 60px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f9c8d4;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+    height: 60px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5em;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.header .title-icon {
+    margin-left: 15px;
+}
+
+.header .title-icon i {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.menu-container {
+    max-width: 900px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin-top: 80px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #000000;
+    padding: 15px 0;
+    position: relative;
+}
+
+.menu-item-img {
+    width: 120px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.menu-item-info {
+    flex: 1;
+}
+
+.menu-item-info h2 {
+    margin: 0;
+    font-size: 1.4em;
+    color: #333;
+}
+
+.menu-item-description {
+    font-size: 0.9em;
+    color: #666;
+    margin: 5px 0;
+}
+
+.menu-item-price {
+    font-size: 1.1em;
+    color: #000000;
+    font-weight: bold;
+}
+
+.add-to-cart-btn {
+    background-color: #f9c8d4;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #f6a1b4;
+}
+
+@media (max-width: 600px) {
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-item-img {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .add-to-cart-btn {
+        position: static;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+.cart-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f9c8d4;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cart-icon:hover {
+    background-color: #f6a1b4;
+    transform: scale(1.1);
+}
+
+.cart-icon i {
+    color: #fff;
+    font-size: 24px;
+}
+
+.cart-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    display: none;
+    z-index: 1000;
+}
+
+.cart-container h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.cart-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-container ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-container #cart-total {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.cart-container #checkout-btn {
+    background-color: #f9c8d4;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.cart-container #checkout-btn:hover {
+    background-color: #f6a1b4;
+}
